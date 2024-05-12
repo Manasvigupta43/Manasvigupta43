@@ -229,6 +229,72 @@ function showListItems()
     
 }
 
+var flag3 = true;
+var x = document.getElementById('catag2-test-list');
+var y = x.getElementsByTagName('li').length;
+var z = document.getElementById('catag-name-2');
+
+function showListItems2()
+{
+    if (flag3)
+    {
+        for (var i = 0; i < y; i++)
+        {
+            x.getElementsByTagName('li')[i].style.visibility = "visible";
+        }
+
+        z.style.listStyleImage = "url('images/minus.png')";
+
+        flag3 = false;
+    } 
+    
+    else if (!flag3)
+    {
+        for (var i = 0; i < y; i++)
+        {
+            x.getElementsByTagName('li')[i].style.visibility = "hidden";
+        }
+
+        z.style.listStyleImage = "url('images/plus.png')";
+
+        flag3 = true;
+    }
+    
+}
+
+var flag5 = true;
+var x = document.getElementById('catag3-test-list');
+var y = x.getElementsByTagName('li').length;
+var z = document.getElementById('catag-name-3');
+
+function showListItems3()
+{
+    if (flag5)
+    {
+        for (var i = 0; i < y; i++)
+        {
+            x.getElementsByTagName('li')[i].style.visibility = "visible";
+        }
+
+        z.style.listStyleImage = "url('images/minus.png')";
+
+        flag3 = false;
+    } 
+    
+    else if (!flag5)
+    {
+        for (var i = 0; i < y; i++)
+        {
+            x.getElementsByTagName('li')[i].style.visibility = "hidden";
+        }
+
+        z.style.listStyleImage = "url('images/plus.png')";
+
+        flag5 = true;
+    }
+    
+}
+
 function showTestPanel()
 {
     quizPageContainer.style.display = "block";
@@ -278,6 +344,34 @@ function testActivation()
     resultDiv.style.display = "none";
 
     showListItems();
+}
+
+function testActivationScience()
+{
+    document.getElementById('ins-heading').innerHTML = "Activation";
+    document.getElementById('coming-soon-logo').style.display = "none";
+    document.getElementById('inst-list').style.display = "none";
+    document.getElementById('ins-heading').style.display = "block";
+    document.getElementById('activation-div').style.display = "block";
+    document.getElementById('inst-before-test').style.display = "none";
+    document.getElementById('test-form').style.display = "none";
+    resultDiv.style.display = "none";
+
+    showListItems2();
+}
+
+function testActivationGK()
+{
+    document.getElementById('ins-heading').innerHTML = "Activation";
+    document.getElementById('coming-soon-logo').style.display = "none";
+    document.getElementById('inst-list').style.display = "none";
+    document.getElementById('ins-heading').style.display = "block";
+    document.getElementById('activation-div').style.display = "block";
+    document.getElementById('inst-before-test').style.display = "none";
+    document.getElementById('test-form').style.display = "none";
+    resultDiv.style.display = "none";
+
+    showListItems3();
 }
 
 function activate()
@@ -394,221 +488,221 @@ function checkTime(i)
 
 var questions = [
     {
-        question: 'HTML tags are case sensitive.',
+        question: 'What is next in the following number series: 256, 289, 324, 361 . . . ?',
         options:
         [
             {
-                option: 'Yes',
+                option: '200',
                 correct: false
             },
             {
-                option: 'No',
+                option: '400',
                 correct: true
             },
             {
-                option: 'Few',
+                option: '600',
                 correct: false
             },
             {
-                option: "I don't know",
+                option: "800",
                 correct: false
             }
         ]
     },
     {
-        question: 'Which of the following tag represents the header of a section in HTML5?',
+        question: 'What is the value of Pi to two individual decimal places?',
         options:
         [
             {
-                option: 'section',
+                option: '3.41',
                 correct: false
             },
             {
-                option: 'header',
+                option: '3.14',
                 correct: true
             },
             {
-                option: 'article',
+                option: '6.07',
                 correct: false
             },
             {
-                option: 'aside',
+                option: 'None',
                 correct: false
             }
         ]
     },
     {
-        question: 'Which of the following is correct about Web form 2.0 in HTML5?',
+        question: 'What is the name of a triangle that has two sides of the same length?',
         options:
         [
             {
-                option: 'Web Forms 2.0 is an extension to the forms features found in HTML4.',
+                option: 'Equilateral Triangle',
                 correct: false
             },
             {
-                option: 'Form elements and attributes in HTML5 provide a greater degree of semantic mark-up than HTML4.',
+                option: 'Scalene Triangle',
                 correct: false
             },
             {
-                option: 'Form elements and attributes in HTML5 remove a great deal of the need for tedious scripting and styling that was required in HTML4.',
+                option: 'Acute Triangle',
                 correct: false
             },
             {
-                option: 'All of the above',
+                option: 'Isosceles Triangle',
                 correct: true
             }
         ]
     },
     {
-        question: 'Which of the following is true about Local Storage in HTML5?',
+        question: 'Solve the following equation: -15 + (-5x)=0.',
         options:
         [
             {
-                option: "HTML5 introduces the localStorage attribute which would be used to access a page's local storage area without no time limit.",
+                option: "3",
                 correct: false
             },
             {
-                option: 'This local storage will be available whenever you would use that page.',
+                option: '9',
                 correct: false
             },
             {
-                option: 'Both of the above.',
+                option: '-3',
                 correct: true
             },
             {
-                option: 'None of the above',
+                option: '-6',
                 correct: false
             }
         ]
     },
     {
-        question: 'Which of the following is correct about Server Side Events(SSE) in HTML5?',
+        question: 'What is the largest two-digit prime number?',
         options:
         [
             {
-                option: "To use Server-Sent Events in a web application, you would need to add an <eventsource> element to the document.",
+                option: "87",
                 correct: false
             },
             {
-                option: 'The src attribute of <eventsource> element should point to an URL which should provide a persistent HTTP connection that sends a data stream containing the events.',
+                option: '93',
                 correct: false
             },
             {
-                option: 'The URL would point to a PHP, PERL or any Python script which would take care of sending event data consistently.',
+                option: '83',
                 correct: false
             },
             {
-                option: 'All of the above',
+                option: '97',
                 correct: true
             }
         ]
     },
     {
-        question: "Which of the following is true about 'video' tag in HTML5?",
+        question: "What is the difference between the largest and smallest digits?",
         options:
         [
             {
-                option: "MPEG4 files with H.264 video codec and AAC audio codec are supported.",
+                option: "8",
                 correct: false
             },
             {
-                option: 'You can use <source> tag to specify media along with media type and many other attributes.',
+                option: '7',
                 correct: false
             },
             {
-                option: 'An video element allows multiple source elements and browser will use the first recognized format.',
+                option: '10',
                 correct: false
             },
             {
-                option: 'All of the above',
+                option: '9',
                 correct: true
             }
         ]
     },
     {
-        question: "Which of the following attribute specifies if the user can edit the element's content or not?",
+        question: "What is 5% of 200?",
         options:
         [
             {
-                option: "editable",
+                option: "15",
                 correct: false
             },
             {
-                option: 'contenteditable',
+                option: '10',
                 correct: true
             },
             {
-                option: 'contextmenu',
+                option: '20',
                 correct: false
             },
             {
-                option: 'content',
+                option: '5',
                 correct: false
             }
         ]
     },
     {
-        question: "Which of the following attribute triggers event when an element is dragged?",
+        question: "What is the perimeter of a square with a side length of 6 cm?",
         options:
         [
             {
-                option: "ondragleave",
+                option: "30 cm",
                 correct: false
             },
             {
-                option: 'ondrag',
+                option: '24 cm',
                 correct: true
             },
             {
-                option: 'ondragend',
+                option: '25 cm',
                 correct: false
             },
             {
-                option: 'ondragenter',
+                option: '27 cm',
                 correct: false
             }
         ]
     },
     {
-        question: "Which of the following attribute triggers event at the start of a drag operation?",
+        question: 'How many edges does a cube have?',
         options:
         [
             {
-                option: "ondragleave",
+                option: "6",
                 correct: false
             },
             {
-                option: 'ondrag',
+                option: '8',
                 correct: false
             },
             {
-                option: 'ondragover',
+                option: '10',
                 correct: false
             },
             {
-                option: 'ondragstart',
+                option: '12',
                 correct: true
             }
         ]
     },
     {
-        question: "Which of the following attribute triggers event when the message is triggered?",
+        question: "If a circle has a diameter of 8 cm, what is its radius?",
         options:
         [
             {
-                option: "onloadedmetadata",
+                option: "6",
                 correct: false
             },
             {
-                option: 'onloadstart',
+                option: '7',
                 correct: false
             },
             {
-                option: 'onmessage',
+                option: '4',
                 correct: true
             },
             {
-                option: 'onoffline',
+                option: '2',
                 correct: false
             }
         ]

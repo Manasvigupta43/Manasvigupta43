@@ -32,7 +32,7 @@
 
         <div id="home-page-container">
             
-            <img src="images/frame.png" alt="Frame" id="frame">
+            <img id="main-page" src="images/frame.jpg" alt="Frame" id="frame">
 
             <h1 id="welcome">Welcome to QuizMine</h1>
 
@@ -45,23 +45,22 @@
                 </div>
 
                 <div class="catag-div left-space">
-                    <img src="images/html.png" alt="Html5" class="logos-margin">
-                    <h2 class="catag-heading">HTML5 Quiz</h2>
+                    <img src="images/maths.jpg" alt="maths" class="logos-margin">
+                    <h2 class="catag-heading">MATHS</h2>
                     <button type="button" onclick="showSignUp()" class="catag-button">Start Now</button>
                 </div>
 
                 <div class="catag-div left-space">
-                    <img src="images/css3.png" alt="Html5" class="logos-margin">
-                    <h2 class="catag-heading">CSS3 Quiz</h2>
-                    <button type="button" class="catag-button">Coming Soon</button>
+                    <img src="images/science.jpg" alt="science" class="logos-margin">
+                    <h2 class="catag-heading">SCIENCE</h2>
+                    <button type="button" onclick="showSignUp()" class="catag-button">Start Now</button>
                 </div>
 
                 <div class="catag-div left-space">
-                    <img src="images/js.png" alt="Html5" class="logos-margin">
-                    <h2 class="catag-heading">JS Quiz</h2>
-                    <button type="button" class="catag-button">Coming Soon</button>
+                    <img src="images/gk.jpg" alt="GK" class="logos-margin">
+                    <h2 class="catag-heading">GK</h2>
+                    <button type="button" onclick="showSignUp()" class="catag-button">Start Now</button>
                 </div>
-
             </div>
 
         </div>
@@ -73,6 +72,7 @@
         <div id="sign-up-form-container">
 
             <div id="form-bar"></div>
+            <img id="main-page" src="images/frame.jpg" alt="Frame" id="frame">
 
             <h3 class="form-heading">Registration Form <span id="sign_in_page"><a onclick="showSignIn()">I want to Sign In</a></span></h3>
 
@@ -100,6 +100,8 @@
 
             <div id="form-bar"></div>
 
+            <img id="main-page" src="images/frame.jpg" alt="Frame" id="frame">
+
             <h3 class="form-heading">Sign In <span id="sign_in_page"><a onclick="showSignUp()">I want to Register</a></span></h3>
 
             <form method="post" action="javascript:void(0)">
@@ -124,22 +126,35 @@
 
         <div id="quiz-page-container">
             
+            <img id="main-page" src="images/quizframe.jpg" alt="Frame" id="frame">
             <div id="menu-box">
                 <div id="menu-box-bar"></div>
-
+ /
                 <ul id="catag-name-list">
-                    <li id="catag-name" onclick="showListItems()">HTML5
+                    <li id="catag-name" onclick="showListItems()">MATHS
                          <ul id="catag1-test-list">
                             <li onclick="testActivation()">Test 1</li>
-                            <li onclick="comingSoon()">Test 2</li>
-                            <li onclick="comingSoon()">Test 3</li>
-                            <li onclick="comingSoon()">Test 4</li>
-                            <li onclick="comingSoon()">Test 5</li>
                         </ul> 
                     </li>
                 </ul>
-
+                <ul id="catag-name-list-2">
+                    <li id="catag-name-2" onclick="showListItems2()">SCIENCE
+                         <ul id="catag2-test-list">
+                            <li onclick="testActivationScience()">Test 1</li>
+                        </ul> 
+                    </li>
+                </ul>
+                <div>
+                <ul id="catag-name-list-3">
+                    <li id="catag-name-3" onclick="showListItems3()">GK
+                         <ul id="catag3-test-list">
+                            <li onclick="testActivationGK()">Test 1</li>
+                        </ul> 
+                    </li>
+                </ul>
+                </div>
             </div>
+            
 
             <div id="quiz-body">
                 
