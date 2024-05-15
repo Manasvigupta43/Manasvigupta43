@@ -1,17 +1,17 @@
 body
-{   
+{  
     min-width: 46.875em;
     margin: 0;
     background-color: lightgray;
 }
-
+ 
 #bar
 {
     width: 100%;
     height: 3px;
     background-color: black;
 }
-
+ 
 #nav-bar
 {
     position: relative;
@@ -20,14 +20,14 @@ body
     background-color: darkcyan;
     box-shadow: 0 1px 20px gray;
 }
-
+ 
 #nav-bar-container
 {
     margin: auto;
     width: 90%;
     height: inherit;
 }
-
+ 
 #logo > a
 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -36,20 +36,20 @@ body
     cursor: pointer;
     text-decoration: none;
 }
-
+ 
 #sign-up-button
 {
     margin-top: -43px;
     margin-right: 120px;
     float: right;
 }
-
+ 
 #sign-in-button
 {
     margin-top: -43px;
     float: right;
 }
-
+ 
 #greet-div
 {
     display: none;
@@ -64,7 +64,7 @@ body
     padding-top: 5px;
     text-align: right;
 }
-
+ 
 .button
 {
     border: 2px solid white;
@@ -73,7 +73,7 @@ body
     border-radius: 10px;
     cursor: pointer;
 }
-
+ 
 .button > button
 {
     background: none;
@@ -88,12 +88,12 @@ body
     border-radius: 10px;
     outline: none;
 }
-
+ 
 .button > button:hover
 {
     background-color: mediumseagreen;
 }
-
+ 
 footer
 {
     clear: both;
@@ -105,13 +105,13 @@ footer
     bottom: 0;
     left: 0;
 }
-
+ 
 footer > div
 {
     margin: auto;
     width: 90%;
 }
-
+ 
 footer > div > ul
 {
     display: inline-block;
@@ -120,7 +120,7 @@ footer > div > ul
     list-style-type: none;
     padding: 0;
 }
-
+ 
 footer > div > ul > li
 {
     float: left;
@@ -129,7 +129,7 @@ footer > div > ul > li
     margin-right: 15px;
     margin-top: 10px;
 }
-
+ 
 footer > div > p
 {
     text-align: center;
@@ -138,12 +138,12 @@ footer > div > p
     font-style: italic;
     float: right;
 }
-
+ 
 footer > div > p > span
-{   
+{  
     color: white;
 }
-
+ 
 #main-page {
     position: fixed;
     top: 0;
@@ -156,7 +156,7 @@ footer > div > p > span
     z-index: -1; /* Ensure it's behind other content */
     min-width: 1040px;
 }
-
+ 
 #home-page-container
 {
     position: absolute;
@@ -164,20 +164,20 @@ footer > div > p > span
     right: 0;
     left: 0;
     bottom: 0;
-
+ 
     display: block;
     margin: auto;
     width: 60%;
     height: 30em;
 }
-
+ 
 #frame
 {
     min-width: 1040px;
     width: 100%;
     height: inherit;
 }
-
+ 
 #welcome
 {
     position: absolute;
@@ -189,7 +189,7 @@ footer > div > p > span
     color: rgb(52, 173, 173);;
     text-shadow: 3px 8px 0 rgb(0, 0, 0);
 }
-
+ 
 #catag-container
 {
     display: flex;
@@ -207,7 +207,7 @@ footer > div > p > span
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
+ 
 .catag-div
 {
     /* width: 12.5em; */
@@ -219,17 +219,17 @@ footer > div > p > span
     border-radius: 5px;
     text-align: center;
 }
-
+ 
 .left-space
 {
     margin-left: 2em;
 }
-
+ 
 .logos-margin
 {
     margin-top: 17.5px;
 }
-
+ 
 #top-catag-heading
 {
     width: 100%;
@@ -244,7 +244,7 @@ footer > div > p > span
     padding-top: 7px;
     border-radius: 0 0 5px 5px;
 }
-
+ 
 .catag-heading
 {
     margin-top: 7px;
@@ -252,7 +252,7 @@ footer > div > p > span
     font-weight: normal;
     margin-bottom: 0;
 }
-
+ 
 .catag-button
 {
     width: 100%;
@@ -267,7 +267,7 @@ footer > div > p > span
     cursor: pointer;
     border-radius: 0 0 5px 5px;
 }
-
+ 
 #sign-up-form-container
 {
     display: none;
@@ -276,7 +276,7 @@ footer > div > p > span
     bottom: 0;
     left: 0;
     right: 0;
-
+ 
     margin: auto;
     background-color: white;
     width: 550px;
@@ -290,15 +290,15 @@ footer > div > p > span
     from {opacity: 0;}
     to {opacity: 1;}
 } */
-
+ 
 #form-bar
 {
     width: 100%;
     height: 4px;
     background-color: darkcyan;
 }
-
-
+ 
+ 
 .form-heading
 {
     margin-top: 0;
@@ -308,20 +308,20 @@ footer > div > p > span
     padding: 12px;
     font-size: 22px;
 }
-
+ 
 #sign-up-form-container > form, #sign-in-form-container > form
 {
     margin: auto;
     width: 95%;
 }
-
+ 
 #sign-up-form-container > form > label, #sign-in-form-container > form > label
 {
     font-family: Arial, Helvetica, sans-serif;
     color: darkcyan;
     font-weight: bold;
 }
-
+ 
 .userInputBox
 {
     width: 100%;
@@ -329,7 +329,7 @@ footer > div > p > span
     border-bottom: 2px solid darkgrey;
     padding-bottom: 2px;
 }
-
+ 
 .inputStyle
 {
     width: 100%;
@@ -337,17 +337,17 @@ footer > div > p > span
     font-size: 20px;
     border: none;
 }
-
+ 
 .inputStyle:focus
 {
     outline: none;
 }
-
+ 
 ::-webkit-input-placeholder
 {
     color: rgb(200, 200, 200);
 }
-
+ 
 .btn-style
 {
     float: right;
@@ -362,12 +362,12 @@ footer > div > p > span
     font-size: 16px;
     text-align: center;
 }
-
+ 
 .btn-style:hover
 {
     cursor: pointer;
 }
-
+ 
 #sign_in_page a
 {
     float: right;
@@ -377,7 +377,7 @@ footer > div > p > span
     text-decoration: none;
     cursor: pointer;
 }
-
+ 
 #sign-in-form-container
 {
     display: none;
@@ -386,7 +386,7 @@ footer > div > p > span
     bottom: 0;
     left: 0;
     right: 0;
-
+ 
     margin: auto;
     background-color: white;
     width: 550px;
@@ -400,7 +400,7 @@ footer > div > p > span
     from {opacity: 0;}
     to {opacity: 1;}
 } */
-
+ 
 #quiz-page-container
 {
     display: none;
@@ -410,7 +410,7 @@ footer > div > p > span
     height: 29.5em;
     /*  border: 1px solid red; */
 }
-
+ 
 #menu-box
 {
     width: 12.5em;
@@ -426,13 +426,13 @@ footer > div > p > span
     from {opacity: 0; margin-left: -50px;}
     to {opacity: 1;}
 }
-
+ 
 #menu-box > ul
 {
     width: 80%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+ 
 #catag-name
 {
     list-style-image: url('../images/plus.png');
@@ -443,7 +443,7 @@ footer > div > p > span
     cursor: pointer;
     font-weight: bold;
 }
-
+ 
 #catag-name-2
 {
     list-style-image: url('../images/plus.png');
@@ -454,7 +454,7 @@ footer > div > p > span
     cursor: pointer;
     font-weight: bold;
 }
-
+ 
 #catag-name-3
 {
     list-style-image: url('../images/plus.png');
@@ -465,25 +465,25 @@ footer > div > p > span
     cursor: pointer;
     font-weight: bold;
 }
-
+ 
 #catag1-test-list
 {
     padding-left: 20px;
     color: gray;
 }
-
+ 
 #catag2-test-list
 {
     padding-left: 20px;
     color: gray;
 }
-
+ 
 #catag3-test-list
 {
     padding-left: 20px;
     color: gray;
 }
-
+ 
 #catag1-test-list li
 {
     visibility: hidden;
@@ -491,7 +491,7 @@ footer > div > p > span
     padding-top: 10px;
     text-indent: 5px;
 }
-
+ 
 #catag2-test-list li
 {
     visibility: hidden;
@@ -499,7 +499,7 @@ footer > div > p > span
     padding-top: 10px;
     text-indent: 5px;
 }
-
+ 
 #catag3-test-list li
 {
     visibility: hidden;
@@ -507,30 +507,30 @@ footer > div > p > span
     padding-top: 10px;
     text-indent: 5px;
 }
-
+ 
 #catag1-test-list li:hover
 {
     color: mediumseagreen;
     cursor: pointer;
 }
-
+ 
 #catag2-test-list li:hover
 {
     color: mediumseagreen;
     cursor: pointer;
 }
-
+ 
 #catag3-test-list li:hover
 {
     color: mediumseagreen;
     cursor: pointer;
 }
-
+ 
 #catag-name > ul
 {
     font-weight: normal;
 }
-
+ 
 #menu-box-bar
 {
     width: 100%;
@@ -538,7 +538,7 @@ footer > div > p > span
     background-color: darkcyan;
     border-radius: 10px;
 }
-
+ 
 #quiz-body
 {
     width: 62.75em;
@@ -549,7 +549,7 @@ footer > div > p > span
     margin-left: 225px;
     margin-top: -472px;
 }
-
+ 
 #quiz-body-header
 {
     width: inherit;
@@ -558,7 +558,7 @@ footer > div > p > span
     border-radius: 15px 15px 0 0;
     padding-top: 10px;
 }
-
+ 
 #inst-list
 {
     display: block;
@@ -567,7 +567,7 @@ footer > div > p > span
     margin-left: 25px;
     font-size: 18px;
 }
-
+ 
 #ins-heading, #test-timer
 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -576,7 +576,7 @@ footer > div > p > span
     font-size: 26px;
     margin-left: 40px;
 }
-
+ 
 #test-timer
 {
     visibility: hidden;
@@ -585,26 +585,26 @@ footer > div > p > span
     margin-right: 50px;
     margin-top: -27px;
 }
-
+ 
 #quiz-body > ol > li
 {
     padding-top: 10px;
     line-height: 30px;
 }
-
+ 
 #coming-soon-logo
 {
     display: none;
     width: 100%;
     text-align: center;
 }
-
+ 
 #coming-soon
 {
     margin-top: 40px;
     width: 35%;
 }
-
+ 
 #activation-div
 {
     display: none;
@@ -617,7 +617,7 @@ footer > div > p > span
     box-shadow: 3px 3px 20px gray;
     text-align: center;
 }
-
+ 
 #activ-div-header
 {
     width: 100%;
@@ -631,7 +631,7 @@ footer > div > p > span
     font-size: 26px;
     margin-bottom: 35px;
 }
-
+ 
 #activation-div > input
 {
     width: 370px;
@@ -640,7 +640,7 @@ footer > div > p > span
     outline: none;
     border-radius: 5px;
 }
-
+ 
 #activation-div > button
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -654,7 +654,7 @@ footer > div > p > span
     cursor: pointer;
     margin-left: 20px;
 }
-
+ 
 #test-form
 {
     display: none;
@@ -668,7 +668,7 @@ footer > div > p > span
     padding: 25px;
     text-align: center;
 }
-
+ 
 .form-content-align
 {
     height: 35px;
@@ -676,7 +676,7 @@ footer > div > p > span
     margin-bottom: 20px;
     text-align: right;
 }
-
+ 
 #test-form > div > label
 {
     color: darkcyan;
@@ -684,7 +684,7 @@ footer > div > p > span
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
 }
-
+ 
 #test-form > div > input
 {
     width: 240px;
@@ -693,7 +693,7 @@ footer > div > p > span
     outline: none;
     border-radius: 5px;
 }
-
+ 
 #message
 {
     margin: auto;
@@ -709,7 +709,7 @@ footer > div > p > span
     padding: 7px;
     margin-top: 30px;
 }
-
+ 
 #cont-btn
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -723,7 +723,7 @@ footer > div > p > span
     cursor: pointer;
     margin-top: 12.5px;
 }
-
+ 
 #inst-before-test
 {
     display: none;
@@ -732,13 +732,13 @@ footer > div > p > span
     margin-left: 25px;
     font-size: 16px;
 }
-
+ 
 #inst-before-test > ol > li
 {
     padding-top: 3px;
     line-height: 30px;
 }
-
+ 
 #inst-before-test > button
 {
     margin-left: 50%;
@@ -752,7 +752,7 @@ footer > div > p > span
     font-size: 16px;
     cursor: pointer;
 }
-
+ 
 #test-div
 {
     margin: auto;
@@ -761,7 +761,7 @@ footer > div > p > span
     height: 325px;
     border-radius: 15px;
 }
-
+ 
 #question-div
 {
     border-radius: 15px 15px 0 0;
@@ -769,7 +769,7 @@ footer > div > p > span
     height: 40px;
     padding-top: 15px;
 }
-
+ 
 #questions
 {
     margin-left: 30px;
@@ -777,7 +777,7 @@ footer > div > p > span
     font-weight: normal;
     font-size: 17px;
 }
-
+ 
 #options
 {
     font-size: 17px;
@@ -785,7 +785,7 @@ footer > div > p > span
     margin-right: 26px;
     margin-top: 30px;
 }
-
+ 
 #next-btn
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -800,7 +800,7 @@ footer > div > p > span
     float: right;
     margin-top: 20px;
 }
-
+ 
 .radioBtn
 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -808,7 +808,7 @@ footer > div > p > span
     font-size: 17px;
     margin-left: 5px;
 }
-
+ 
 #result-div
 {
     display: none;
@@ -828,7 +828,7 @@ footer > div > p > span
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
+ 
 #result-div-header
 {
     width: 100%;
@@ -842,7 +842,7 @@ footer > div > p > span
     font-size: 26px;
     margin-bottom: 0px;
 }
-
+ 
 #score
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -850,7 +850,7 @@ footer > div > p > span
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+ 
 #result-div-footer
 {
     width: 100%;
@@ -864,33 +864,152 @@ footer > div > p > span
     font-size: 26px;
     margin-top: 0px;
 }
-
+ 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
-  
-  .button1.educator , .button1.student {
-    padding: 10px 20px;
+ 
+  /* .button1.educator, .button1.student {
+    padding: 15px 30px;
     margin: 0 10px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
-  }
-  
-  .educator {
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.educator {
     background-color: #4CAF50; /* Green */
+    /* color: white; */
+/* } */
+/* 
+.student {
+    background-color: #4CAF50;
     color: white;
-  }
-  
-  .student {
-    background-color: #7bed9f; 
-    color: white;
-  }
-  
+}
+
+ 
   .button1:hover {
     opacity: 0.8;
-  }
+  } */ 
+  .button1.educator, .button1.student {
+    padding: 15px 30px; /* Increased padding */
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px; /* Increased font size */
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    width: 100vw; /* Set full viewport width */
+    height: 100vh; /* Set full viewport height */
+    
+}
+
+body {
+    margin: 0;
+}
+
+.educator {
+    background-color: darkcyan; /* Green */
+    color: white;
+}
+
+.student {
+    background-color: darkcyan;
+    color: white;
+}
+.button1:hover {
+    opacity: 0.8;
+  } 
+
+  /* //-----------------------educator css starts-------// */
+  .header {
+    width: 100%;
+    height: 80px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+ 
+.header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+ 
+.header h3 {
+    font-size: 18px;
+    color: #666;
+    margin-top: 5px;
+}
+.main{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.img{
+    width: 400px;
+    height: 400px;
+    /* background-color: red; */
+}
+.child-img{
+    width: 100%;
+}
+ 
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+ 
+.container h1 {
+    color: darkcyan;
+    margin-bottom: 30px;
+}
+ 
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkcyan;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+button:hover {
+    background-color: darkgreen;
+}
+ 
+button:last-child {
+    background-color: darkcyan;  
+}
+ 
+button:last-child:hover {
+    background-color:darkcyan;
+}  
+

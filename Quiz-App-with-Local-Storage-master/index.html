@@ -32,17 +32,17 @@
 
         <div id="home-page-container">
             
-            <img id="main-page" src="images/frame.jpg" alt="Frame" id="frame">
+            <!-- <img id="main-page" src="images/frame.jpg" alt="Frame" id="frame"> -->
 
             <h1 id="welcome">Welcome to QuizMine</h1>
 
             <div id="catag-container">
-
+<!-- 
                 <div class="catag-div left-space" id="catag-1">
                     <img src="images/quiz.png" alt="" class="logos-margin">
                     <h2 class="catag-heading">Best Quizes</h2>
                     <h2 id="top-catag-heading">Top Catagories</h2>
-                </div>
+                </div> -->
 
                 <div class="catag-div left-space">
                     <img src="images/maths.jpg" alt="maths" class="logos-margin">
@@ -64,10 +64,13 @@
             </div>
 
         </div>
-        <div class="container" id="rolePage" style="display: none;">
-            <button class="button1 educator">Educator</button>
+      
+        <div class="button-container" id="rolePage" style="display: none;" >
+            <button class="button1 educator" onclick="openEducator()">Educator</button>
             <button class="button1 student" onclick="showTestPanel()">Student</button>
         </div>
+        
+        
 
         <div id="sign-up-form-container">
 
@@ -131,24 +134,24 @@
                 <div id="menu-box-bar"></div>
  /
                 <ul id="catag-name-list">
-                    <li id="catag-name" onclick="showListItems()">MATHS
+                    <li id="catag-name" onclick="subjectOnClick('Maths')">MATHS
                          <ul id="catag1-test-list">
-                            <li onclick="testActivation()">Test 1</li>
+                            <li onclick="testActivation('Maths')">Test 1</li>
                         </ul> 
                     </li>
                 </ul>
                 <ul id="catag-name-list-2">
-                    <li id="catag-name-2" onclick="showListItems2()">SCIENCE
+                    <li id="catag-name-2" onclick="subjectOnClick('Science')">SCIENCE
                          <ul id="catag2-test-list">
-                            <li onclick="testActivationScience()">Test 1</li>
+                            <li onclick="testActivation('Science')">Test 1</li>
                         </ul> 
                     </li>
                 </ul>
                 <div>
                 <ul id="catag-name-list-3">
-                    <li id="catag-name-3" onclick="showListItems3()">GK
+                    <li id="catag-name-3" onclick="subjectOnClick('GK')">GK
                          <ul id="catag3-test-list">
-                            <li onclick="testActivationGK()">Test 1</li>
+                            <li onclick="testActivation('GK')">Test 1</li>
                         </ul> 
                     </li>
                 </ul>
@@ -262,6 +265,54 @@
 
             </div>
         </div>
+        <div id="educator-page" style="display: none;"><header class="header">
+            <h2>Hii,</h2>
+            <h3>Welcome to the quizz</h3>
+        </header>
+     <div class="main">
+        <div class="img">
+            <img class="child-img" src='https://cdn3.iconfinder.com/data/icons/avatars-flat/33/man_5-1024.png'>
+         </div>
+        <div class="container">
+            <h1>Educator Dashboard</h1>
+            <button onclick="window.location.href = 'create_quiz.html';">Add Quiz</button>
+            <button onclick="window.location.href = 'edit_quiz.html';">Edit Quiz</button>
+            <button onclick="deleteQuiz()">Delete Quiz</button>
+        </div>
+     
+     </div>
+     
+    <script>
+    function deleteQuiz() {
+        // Retrieve quiz questions from local storage
+        let quizQuestions = JSON.parse(localStorage.getItem("quizQuestions")) || [];
+     
+        if (quizQuestions.length === 0) {
+            alert("No quiz questions available to delete.");
+            return;
+        }
+     
+        // Display a prompt to select the question to delete
+        let questionIndex = prompt(`Enter the index of the question to delete (0-${quizQuestions.length - 1}):`);
+        questionIndex = parseInt(questionIndex);
+     
+        if (isNaN(questionIndex) || questionIndex < 0 || questionIndex >= quizQuestions.length) {
+            alert("Invalid index. Please enter a valid index.");
+            return;
+        }
+     
+        let confirmDelete = confirm(`Are you sure you want to delete the question at index ${questionIndex}?`);
+        if (confirmDelete) {
+            // Remove the question from the array
+            quizQuestions.splice(questionIndex, 1);
+     
+            // Update the local storage
+            localStorage.setItem("quizQuestions", JSON.stringify(quizQuestions));
+            alert("Quiz question deleted successfully.");
+        }
+    }
+    </script>
+     </div>
 
         
 

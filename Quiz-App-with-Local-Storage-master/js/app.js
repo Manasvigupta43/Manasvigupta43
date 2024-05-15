@@ -180,7 +180,8 @@ function userSignIn()
                 signInForm.style.display = "none";
                 rolePage.style.display = "block";
                 testDiv.style.display = "none";
-            
+                document.getElementById('sign-up-button').style.display = "none";
+                document.getElementById('signIn').innerHTML = "Sign Out";
 
                 break;
             }
@@ -195,12 +196,39 @@ function userSignIn()
         }
     }
 }
-
-var flag3 = true;
-var x = document.getElementById('catag1-test-list');
-var y = x.getElementsByTagName('li').length;
-var z = document.getElementById('catag-name');
-
+function openEducator()
+{
+    document.getElementById('educator-page').style.display = "block";
+    quizPageContainer.style.display = "none";
+    homePageContainer.style.display = "none";
+    signInForm.style.display = "none"
+    testDiv.style.display = "none"
+    rolePage.style.display = "none";
+}
+var flag3 ;
+var x ;
+var y ;
+var z ;
+function subjectOnClick(subject)
+{
+    if (subject=="Maths") {
+         flag3 = true;
+         x = document.getElementById('catag1-test-list');
+         y = x.getElementsByTagName('li').length;
+         z = document.getElementById('catag-name');
+    } else if(subject=="Science"){
+         flag3 = true;
+         x = document.getElementById('catag2-test-list');
+         y = x.getElementsByTagName('li').length;
+         z = document.getElementById('catag-name-2');
+    }else {
+         flag3 = true;
+         x = document.getElementById('catag3-test-list');
+         y = x.getElementsByTagName('li').length;
+         z = document.getElementById('catag-name-3');
+     }
+     showListItems();
+}
 function showListItems()
 {
     if (flag3)
@@ -234,66 +262,66 @@ var x = document.getElementById('catag2-test-list');
 var y = x.getElementsByTagName('li').length;
 var z = document.getElementById('catag-name-2');
 
-function showListItems2()
-{
-    if (flag3)
-    {
-        for (var i = 0; i < y; i++)
-        {
-            x.getElementsByTagName('li')[i].style.visibility = "visible";
-        }
+// function showListItems2()
+// {
+//     if (flag3)
+//     {
+//         for (var i = 0; i < y; i++)
+//         {
+//             x.getElementsByTagName('li')[i].style.visibility = "visible";
+//         }
 
-        z.style.listStyleImage = "url('images/minus.png')";
+//         z.style.listStyleImage = "url('images/minus.png')";
 
-        flag3 = false;
-    } 
+//         flag3 = false;
+//     } 
     
-    else if (!flag3)
-    {
-        for (var i = 0; i < y; i++)
-        {
-            x.getElementsByTagName('li')[i].style.visibility = "hidden";
-        }
+//     else if (!flag3)
+//     {
+//         for (var i = 0; i < y; i++)
+//         {
+//             x.getElementsByTagName('li')[i].style.visibility = "hidden";
+//         }
 
-        z.style.listStyleImage = "url('images/plus.png')";
+//         z.style.listStyleImage = "url('images/plus.png')";
 
-        flag3 = true;
-    }
+//         flag3 = true;
+//     }
     
-}
+// }
 
-var flag5 = true;
-var x = document.getElementById('catag3-test-list');
-var y = x.getElementsByTagName('li').length;
-var z = document.getElementById('catag-name-3');
+// var flag5 = true;
+// var x = document.getElementById('catag3-test-list');
+// var y = x.getElementsByTagName('li').length;
+// var z = document.getElementById('catag-name-3');
 
-function showListItems3()
-{
-    if (flag5)
-    {
-        for (var i = 0; i < y; i++)
-        {
-            x.getElementsByTagName('li')[i].style.visibility = "visible";
-        }
+// function showListItems3()
+// {
+//     if (flag5)
+//     {
+//         for (var i = 0; i < y; i++)
+//         {
+//             x.getElementsByTagName('li')[i].style.visibility = "visible";
+//         }
 
-        z.style.listStyleImage = "url('images/minus.png')";
+//         z.style.listStyleImage = "url('images/minus.png')";
 
-        flag3 = false;
-    } 
+//         flag3 = false;
+//     } 
     
-    else if (!flag5)
-    {
-        for (var i = 0; i < y; i++)
-        {
-            x.getElementsByTagName('li')[i].style.visibility = "hidden";
-        }
+//     else if (!flag5)
+//     {
+//         for (var i = 0; i < y; i++)
+//         {
+//             x.getElementsByTagName('li')[i].style.visibility = "hidden";
+//         }
 
-        z.style.listStyleImage = "url('images/plus.png')";
+//         z.style.listStyleImage = "url('images/plus.png')";
 
-        flag5 = true;
-    }
+//         flag5 = true;
+//     }
     
-}
+// }
 
 function showTestPanel()
 {
@@ -332,8 +360,15 @@ function comingSoon()
 
 }
 
-function testActivation()
+function testActivation(subject)
 {
+    if (subject=="Maths") {
+        questions=mathQuestions
+    } else if(subject=="Science"){
+        questions=scienceQuestions
+    }else {
+        questions=gkQuestions;
+     }
     document.getElementById('ins-heading').innerHTML = "Activation";
     document.getElementById('coming-soon-logo').style.display = "none";
     document.getElementById('inst-list').style.display = "none";
@@ -346,33 +381,7 @@ function testActivation()
     showListItems();
 }
 
-function testActivationScience()
-{
-    document.getElementById('ins-heading').innerHTML = "Activation";
-    document.getElementById('coming-soon-logo').style.display = "none";
-    document.getElementById('inst-list').style.display = "none";
-    document.getElementById('ins-heading').style.display = "block";
-    document.getElementById('activation-div').style.display = "block";
-    document.getElementById('inst-before-test').style.display = "none";
-    document.getElementById('test-form').style.display = "none";
-    resultDiv.style.display = "none";
 
-    showListItems2();
-}
-
-function testActivationGK()
-{
-    document.getElementById('ins-heading').innerHTML = "Activation";
-    document.getElementById('coming-soon-logo').style.display = "none";
-    document.getElementById('inst-list').style.display = "none";
-    document.getElementById('ins-heading').style.display = "block";
-    document.getElementById('activation-div').style.display = "block";
-    document.getElementById('inst-before-test').style.display = "none";
-    document.getElementById('test-form').style.display = "none";
-    resultDiv.style.display = "none";
-
-    showListItems3();
-}
 
 function activate()
 {
@@ -428,7 +437,7 @@ function startQuiz()
 {
     document.getElementById('test-timer').style.visibility = "visible";
     document.getElementById("next-btn").innerHTML = "Next";
-    document.getElementById('ins-heading').innerHTML = "HTML 5 - Test 1";
+    document.getElementById('ins-heading').innerHTML = "Test 1";
 
     startTime();
 
@@ -486,7 +495,7 @@ function checkTime(i)
     return i;
 }
 
-var questions = [
+var mathQuestions = [
     {
         question: 'What is next in the following number series: 256, 289, 324, 361 . . . ?',
         options:
@@ -708,6 +717,433 @@ var questions = [
         ]
     }
 ];
+var scienceQuestions = [
+    {
+        question: 'What is the powerhouse of the cell?',
+        options: [
+            {
+                option: 'Nucleus',
+                correct: false
+            },
+            {
+                option: 'Mitochondria',
+                correct: true
+            },
+            {
+                option: 'Ribosome',
+                correct: false
+            },
+            {
+                option: 'Endoplasmic reticulum',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the process by which plants make their food?',
+        options: [
+            {
+                option: 'Respiration',
+                correct: false
+            },
+            {
+                option: 'Photosynthesis',
+                correct: true
+            },
+            {
+                option: 'Fermentation',
+                correct: false
+            },
+            {
+                option: 'Transpiration',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which gas do plants use in the process of photosynthesis?',
+        options: [
+            {
+                option: 'Oxygen',
+                correct: false
+            },
+            {
+                option: 'Carbon dioxide',
+                correct: true
+            },
+            {
+                option: 'Nitrogen',
+                correct: false
+            },
+            {
+                option: 'Hydrogen',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the chemical symbol for water?',
+        options: [
+            {
+                option: 'H2O',
+                correct: true
+            },
+            {
+                option: 'CO2',
+                correct: false
+            },
+            {
+                option: 'O2',
+                correct: false
+            },
+            {
+                option: 'NaCl',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which planet is known as the "Red Planet"?',
+        options: [
+            {
+                option: 'Earth',
+                correct: false
+            },
+            {
+                option: 'Mars',
+                correct: true
+            },
+            {
+                option: 'Jupiter',
+                correct: false
+            },
+            {
+                option: 'Venus',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the chemical symbol for gold?',
+        options: [
+            {
+                option: 'Gd',
+                correct: false
+            },
+            {
+                option: 'Au',
+                correct: true
+            },
+            {
+                option: 'Ag',
+                correct: false
+            },
+            {
+                option: 'Fe',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which of the following is not a type of rock?',
+        options: [
+            {
+                option: 'Sedimentary',
+                correct: false
+            },
+            {
+                option: 'Igneous',
+                correct: false
+            },
+            {
+                option: 'Organic',
+                correct: true
+            },
+            {
+                option: 'Metamorphic',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the smallest unit of matter?',
+        options: [
+            {
+                option: 'Atom',
+                correct: true
+            },
+            {
+                option: 'Molecule',
+                correct: false
+            },
+            {
+                option: 'Cell',
+                correct: false
+            },
+            {
+                option: 'Proton',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which gas do humans breathe out?',
+        options: [
+            {
+                option: 'Oxygen',
+                correct: false
+            },
+            {
+                option: 'Carbon dioxide',
+                correct: true
+            },
+            {
+                option: 'Nitrogen',
+                correct: false
+            },
+            {
+                option: 'Hydrogen',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the force that pulls objects towards the center of the Earth?',
+        options: [
+            {
+                option: 'Gravity',
+                correct: true
+            },
+            {
+                option: 'Magnetism',
+                correct: false
+            },
+            {
+                option: 'Friction',
+                correct: false
+            },
+            {
+                option: 'Tension',
+                correct: false
+            }
+        ]
+    }
+];
+
+var gkQuestions = [
+    {
+        question: 'What is the capital of France?',
+        options: [
+            {
+                option: 'Paris',
+                correct: true
+            },
+            {
+                option: 'London',
+                correct: false
+            },
+            {
+                option: 'Berlin',
+                correct: false
+            },
+            {
+                option: 'Rome',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Who wrote "To Kill a Mockingbird"?',
+        options: [
+            {
+                option: 'Harper Lee',
+                correct: true
+            },
+            {
+                option: 'J.K. Rowling',
+                correct: false
+            },
+            {
+                option: 'George Orwell',
+                correct: false
+            },
+            {
+                option: 'Mark Twain',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which country is known as the Land of the Rising Sun?',
+        options: [
+            {
+                option: 'China',
+                correct: false
+            },
+            {
+                option: 'India',
+                correct: false
+            },
+            {
+                option: 'Japan',
+                correct: true
+            },
+            {
+                option: 'Australia',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Who is known as the "Father of Computers"?',
+        options: [
+            {
+                option: 'Bill Gates',
+                correct: false
+            },
+            {
+                option: 'Steve Jobs',
+                correct: false
+            },
+            {
+                option: 'Charles Babbage',
+                correct: true
+            },
+            {
+                option: 'Tim Berners-Lee',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which planet is known as the "Morning Star" or "Evening Star"?',
+        options: [
+            {
+                option: 'Venus',
+                correct: true
+            },
+            {
+                option: 'Mars',
+                correct: false
+            },
+            {
+                option: 'Jupiter',
+                correct: false
+            },
+            {
+                option: 'Saturn',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Who painted the Mona Lisa?',
+        options: [
+            {
+                option: 'Leonardo da Vinci',
+                correct: true
+            },
+            {
+                option: 'Vincent van Gogh',
+                correct: false
+            },
+            {
+                option: 'Pablo Picasso',
+                correct: false
+            },
+            {
+                option: 'Michelangelo',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which is the smallest continent in the world?',
+        options: [
+            {
+                option: 'Europe',
+                correct: false
+            },
+            {
+                option: 'Asia',
+                correct: false
+            },
+            {
+                option: 'Australia',
+                correct: true
+            },
+            {
+                option: 'South America',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Who discovered penicillin?',
+        options: [
+            {
+                option: 'Louis Pasteur',
+                correct: false
+            },
+            {
+                option: 'Alexander Fleming',
+                correct: true
+            },
+            {
+                option: 'Marie Curie',
+                correct: false
+            },
+            {
+                option: 'Albert Einstein',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which is the longest river in the world?',
+        options: [
+            {
+                option: 'Amazon',
+                correct: true
+            },
+            {
+                option: 'Nile',
+                correct: false
+            },
+            {
+                option: 'Mississippi',
+                correct: false
+            },
+            {
+                option: 'Yangtze',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the largest ocean in the world?',
+        options: [
+            {
+                option: 'Atlantic',
+                correct: false
+            },
+            {
+                option: 'Indian',
+                correct: false
+            },
+            {
+                option: 'Arctic',
+                correct: false
+            },
+            {
+                option: 'Pacific',
+                correct: true
+            }
+        ]
+    }
+];
+
+
 
 var score = 0;
 var changeQuestion = 0;
